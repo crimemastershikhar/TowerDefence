@@ -2,22 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Summary: This class is responsible for managing the turrent range and enemy target lock mechanism
+/// <summary>
+/// This class is responsible for managing the turrent range and enemy target lock mechanism. Add namespaces
+/// </summary>
+
 
 public class Turret : MonoBehaviour {
+
+    private Bullet bullet;
     private Transform target;
 
-    [Header("Attributes")]
 
+    [Header("Attributes")]
     [SerializeField]
     private float range = 15f;
     [SerializeField]
-    private float fireRate = 1f;
+    private float fireRate = 0.8f;
     [SerializeField]
     private float fireCountDown = 0f;
 
     [Header("Unity Setup Fields")]
-
     [SerializeField]
     private float turnSpeed = 10f;
     [SerializeField]
@@ -34,7 +38,7 @@ public class Turret : MonoBehaviour {
     }
 
     private void Start() {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        InvokeRepeating(nameof(UpdateTarget), 0f, 0.5f);
 
     }
 
@@ -62,7 +66,13 @@ public class Turret : MonoBehaviour {
     }
 
     private void Shoot() {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet = bulletGO.GetComponent<Bullet>();
+
+        if(bullet != null)
+        {
+            bullet.Chase(target);
+        }
 
     }
 
