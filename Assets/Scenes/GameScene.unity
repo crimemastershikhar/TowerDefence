@@ -13078,8 +13078,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -81.69759, y: 0}
-  m_SizeDelta: {x: 391.629, y: 314.1564}
+  m_AnchoredPosition: {x: -188.28415, y: 0}
+  m_SizeDelta: {x: 178.456, y: 267.5612}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1623537498
 MonoBehaviour:
@@ -13128,15 +13128,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 310
-  m_fontSizeBase: 310
+  m_fontSize: 250
+  m_fontSizeBase: 250
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -15816,6 +15816,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 668082319}
     m_Modifications:
+    - target: {fileID: 728020469787844448, guid: 9ec7f8e10bd1c11469d76a2082661589, type: 3}
+      propertyPath: hoverColor.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 728020469787844448, guid: 9ec7f8e10bd1c11469d76a2082661589, type: 3}
+      propertyPath: hoverColor.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 728020469787844448, guid: 9ec7f8e10bd1c11469d76a2082661589, type: 3}
+      propertyPath: hoverColor.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
     - target: {fileID: 2976144610241873729, guid: 9ec7f8e10bd1c11469d76a2082661589, type: 3}
       propertyPath: m_Name
       value: Node (5)

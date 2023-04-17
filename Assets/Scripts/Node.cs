@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Summary: This class is responsible to check and build on top of the node if its empty + It also handled the user interactions with the nodes environment
+/// <summary>
+/// This class is responsible to check and build on top of the node if its empty + 
+/// It also handled the user interactions with the nodes environment
+/// </summary>
+
 
 public class Node : MonoBehaviour {
 
@@ -34,7 +38,7 @@ public class Node : MonoBehaviour {
             return;
 
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+        turret = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
 
 
     }
