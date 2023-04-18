@@ -1,15 +1,15 @@
 using UnityEngine;
 
-//Summary: Using Singleton for a single refrence for all nodes 
+/// <summary>
+/// Using Singleton for a single refrence for all nodes 
+/// </summary>
+
 
 public class BuildManager : MonoBehaviour {
-
-    [SerializeField]
-    private GameObject standardTurretPrefab;
-
+     
+    public GameObject standardTurretPrefab;
 
     private GameObject turretToBuild;
-
     public static BuildManager instance;
 
     private void Awake() {
@@ -26,6 +26,23 @@ public class BuildManager : MonoBehaviour {
 
     public GameObject GetTurretToBuild() {
         return turretToBuild;
+
     }
 
-}
+    public void SetTurretToBuild(GameObject turret)
+    {
+        turretToBuild = turret;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+}//Class

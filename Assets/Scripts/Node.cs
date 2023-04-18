@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// This class is responsible to check and build on top of the node if its empty + 
@@ -18,17 +19,23 @@ public class Node : MonoBehaviour {
     private GameObject turret;
     private Vector3 positionOffset;
 
-    private BuildManager buildManager;    
+    private BuildManager buildManager => BuildManager.instance;    
 
     private void Start() {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
         positionOffset = new Vector3(0f, 0.5f, 0f);
 
-        buildManager = BuildManager.instance;
     }
 
     private void OnMouseEnter() {
+
+        if (buildManager.GetTurretToBuild() == null)
+            return;
+
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         rend.material.color = hoverColor;
     }
 
