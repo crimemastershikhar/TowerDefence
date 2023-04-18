@@ -8,6 +8,7 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour {
      
     public GameObject standardTurretPrefab;
+    public GameObject missileLauncher;
 
     private GameObject turretToBuild;
     public static BuildManager instance;

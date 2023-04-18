@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    private GameObject standardTurretButton, powerTurretButton, ultimateTurretButton;
+    private GameObject standardTurretButton, missileLauncherButton, ultimateTurretButton;
     private BuildManager buildManager => BuildManager.instance;
 
     private void Start()
@@ -18,10 +18,10 @@ public class Shop : MonoBehaviour
         standardTurretButton = GameObject.FindGameObjectWithTag("StandardTurret");
         standardTurretButton.GetComponent<Button>().onClick.AddListener(PurchaseStandardTurret);
 
-/*        powerTurretButton = GameObject.Find(nameof(TowerType.PowerTurret.ToString));
-        powerTurretButton.GetComponent<Button>().onClick.AddListener(PurchasePowerTurret);
+        missileLauncherButton = GameObject.Find(nameof(TowerType.MissileLauncher.ToString));
+        missileLauncherButton.GetComponent<Button>().onClick.AddListener(PurchaseMissileLauncher);
 
-        ultimateTurretButton = GameObject.Find(nameof(TowerType.UltimateTurret.ToString));
+/*        ultimateTurretButton = GameObject.Find(nameof(TowerType.UltimateTurret.ToString));
         ultimateTurretButton.GetComponent<Button>().onClick.AddListener(PurchaseUltimateTurret);*/
 
     }
@@ -33,9 +33,9 @@ public class Shop : MonoBehaviour
 
     }
 
-    public void PurchasePowerTurret()
+    public void PurchaseMissileLauncher()
     {
-        buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+        buildManager.SetTurretToBuild(buildManager.missileLauncher);
 
     }
 
