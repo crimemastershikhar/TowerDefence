@@ -4,9 +4,11 @@ using UnityEngine;
 /// Using Singleton for a single refrence for all nodes 
 /// </summary>
 
-
 public class BuildManager : MonoBehaviour {
-     
+
+    /// <summary>
+    /// Introduce enums/SO here later for diff types of weapons
+    /// </summary>
     public GameObject standardTurretPrefab;
     public GameObject missileLauncher;
 
@@ -18,11 +20,6 @@ public class BuildManager : MonoBehaviour {
             return;
 
         instance = this;
-    }
-
-    private void Start() {
-        turretToBuild = standardTurretPrefab;
-
     }
 
     public GameObject GetTurretToBuild() {
